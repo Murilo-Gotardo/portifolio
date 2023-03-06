@@ -1,0 +1,250 @@
+* {
+    --primary-color: #0C1C29;
+    --primary-opacity: rgb(12, 28, 41, .3);
+    --secondary-color: #0F3446;
+    --secondary-opacity: rgb(15, 52, 70, .3);
+    --tertiary-color: #369090;
+    --quaternary-color: #EDE700;
+}
+
+html {
+    font-family: 'VT323', monospace;
+}
+
+::selection {
+    background: var(--quaternary-color);
+}
+
+.container {
+    width: 100%;
+    aspect-ratio: 100 / 29;
+}
+
+body {
+    background-image: url(../img/Japanese_Autumn_v03.jpg);
+    background-color: #000000;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(.5vh);
+    color: var(--tertiary-color);
+    margin: 0;
+}
+
+nav {
+    position: sticky;
+    top: 200px;
+    width: 100px;
+}
+
+nav div {
+    position: absolute;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 33vh;   
+}
+
+.cmd {
+    font-size: larger;
+    margin: 10px;
+    padding: 2vh;
+    background-color: var(--primary-opacity);
+    box-shadow: -1rem 0 3rem #000000;
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 599px) {
+   
+}
+
+@media (max-width: 600px) {
+    
+}
+
+@media (max-width: 900px) {
+    .contain-card {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .wrapper {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1800px) {
+    
+}
+
+.escreve::before,
+.escreve2::before {
+    content: '> ';
+}
+
+.escreve::after,
+.escreve2::after {
+    content: '|';
+    color: var(--tertiary-color);
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.escreve::after,
+.escreve2::after {
+    animation: blink .8s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.container-wrapper {
+    margin-top: 70px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-wrapper h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.contain-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 33vh;   
+}
+
+.card {
+    display: grid;
+    height: 280px;
+    width: 200px;
+    background-color: var(--primary-opacity);
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000000;
+    margin-left: -10px;
+    margin-right: -10px;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover~.card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+.title {
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+}
+
+.emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+}
+
+.filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0, 154, 217);
+    background: linear-gradient(90deg, rgba(0, 154, 217, 1) 0%, rgba(217, 147, 0, 1) 65%, rgba(255, 186, 0, 1) 100%);
+    transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+}
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: rgba(10, 38, 71, .2);
+    stroke-width: 2px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
+
+/* .gradient-border {
+    --white: linear-gradient(white, white);
+    --gradient: linear-gradient(to right, #31CCCC, #3BB6DE);
+
+    border: solid 0.25rem transparent;
+    border-radius: 0.5rem;
+
+    background:
+        var(--white) padding-box,
+        var(--gradient) border-box;
+} */
