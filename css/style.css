@@ -12,7 +12,7 @@ html {
 }
 
 ::selection {
-    background: var(--quaternary-color);
+    background-color: var(--quaternary-color);
 }
 
 .container {
@@ -31,14 +31,22 @@ body {
     margin: 0;
 }
 
-nav {
-    position: sticky;
-    top: 200px;
-    width: 100px;
+a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    transition: .3s;
+    border-radius: 10px;
+    padding: 3px;
 }
 
-nav div {
-    position: absolute;
+a:hover {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+}
+
+.links {
+    list-style: "+ ";
+    color: var(--quaternary-color);
 }
 
 main {
@@ -57,7 +65,7 @@ main {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 33vh;   
+    grid-auto-rows: 33vh;
 }
 
 .cmd {
@@ -69,18 +77,18 @@ main {
     border-radius: 10px;
 }
 
+span {
+    color: var(--quaternary-color)
+}
+
 ul {
     list-style: none;
     font-size: 1.7rem;
 }
 
-@media (max-width: 599px) {
-   
-}
+@media (max-width: 599px) {}
 
-@media (max-width: 600px) {
-    
-}
+@media (max-width: 600px) {}
 
 @media (max-width: 900px) {
     .contain-card {
@@ -92,30 +100,33 @@ ul {
     }
 }
 
-@media (max-width: 1200px) {
-    
-}
+@media (max-width: 1200px) {}
 
-@media (max-width: 1800px) {
-    
-}
+@media (max-width: 1800px) {}
 
 .escreve::before,
-.escreve2::before {
+.escreve2::before,
+.escreve3::before,
+.escreve4::before {
     content: '> ';
+    color: var(--quaternary-color);
 }
 
 .escreve::after,
-.escreve2::after {
+.escreve2::after,
+.escreve3::after,
+.escreve4::after {
     content: '|';
-    color: var(--tertiary-color);
+    color: var(--quaternary-color);
     opacity: 1;
     margin-left: 5px;
     display: inline-block;
 }
 
 .escreve::after,
-.escreve2::after {
+.escreve2::after,
+.escreve3::after,
+.escreve4::after {
     animation: blink .8s infinite;
 }
 
@@ -148,7 +159,7 @@ ul {
 .contain-card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 33vh;   
+    grid-auto-rows: 33vh;
 }
 
 .card {
