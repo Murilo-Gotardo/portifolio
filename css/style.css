@@ -21,8 +21,8 @@ html {
 }
 
 body {
-    background-image: url(../img/Japanese_Autumn_v03.jpg);
-    background-color: #000000;
+    /* background-image: url(../img/Japanese_Autumn_v03.jpg); */
+    background-color: var(--primary-color);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -75,6 +75,11 @@ main {
     background-color: var(--primary-opacity);
     box-shadow: -1rem 0 3rem #000000;
     border-radius: 10px;
+    max-width: 100vh;
+}
+
+.cmd p {
+    font-size: 1.4rem;
 }
 
 span {
