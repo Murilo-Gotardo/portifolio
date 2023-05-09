@@ -7,10 +7,6 @@
     --quaternary-color: #EDE700;
 }
 
-html {
-    font-family: 'VT323', monospace;
-}
-
 ::selection {
     background-color: var(--quaternary-color);
 }
@@ -21,6 +17,7 @@ html {
 }
 
 body {
+    font-family: 'VT323', monospace;
     background-image: url(../img/layered-peaks.svg);
     background-color: var(--primary-color);
     background-attachment: fixed;
@@ -252,15 +249,3 @@ svg {
     stroke-dashoffset: 100;
     transition: 0.6s ease-out;
 }
-
-/* .gradient-border {
-    --white: linear-gradient(white, white);
-    --gradient: linear-gradient(to right, #31CCCC, #3BB6DE);
-
-    border: solid 0.25rem transparent;
-    border-radius: 0.5rem;
-
-    background:
-        var(--white) padding-box,
-        var(--gradient) border-box;
-} */
